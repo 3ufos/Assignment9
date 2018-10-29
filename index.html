@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HALLOWEEN BOX</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Rokkitt|Kirang+Haerang" rel="stylesheet">
+</head>
+<body>
+<!-- i was gonna do a cool thing where the page looks blank except for the button and clicking on it will turn the page black reveal the white images and you can press a key to make the colors appear, but i had to cut out the first step. rip -->
+
+<!-- 	<div class="butt">
+		<button onclick="document.body.style.background='black';">Turn Off The Lights</button>
+	</div> -->
+	<div class="contain">
+		
+		<div class="flash"><img src="images/spooky.png" width="200px" height="200px" alt="spooky pumpkin!"></div>
+		<div class="flash"><img src="images/spooky1.png" width="200px" height="200px" alt="spooky ghost!"></div>
+		<div class="flash"><img src="images/spooky2.png" width="200px" height="200px" alt="spooky cat!"></div>
+	</div>
+<!-- i wanted to make the colors cycle through the 3 colors with every button press, but i forgot how to do that in javascript...! -->
+
+	<h1>press a key to <b>TURN ON</b> some lights!</h1>
+	<script type="text/javascript">
+		document.addEventListener("keypress", function(event){
+			console.log(event);
+			var color=["orange","olive","chocolate"];
+			var divs=document.getElementsByClassName("flash");
+			
+			for(var i=0;i<divs.length;i++){
+				divs[i].style.background=color[i];		
+			}
+		})
+			
+	</script>
+</body>
+</html>
